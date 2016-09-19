@@ -4,10 +4,8 @@
 
 body {
 	background: #f9f9f9;
-	border-right: 80px solid red;
 	min-height: 100vh;
 	@media (max-width: 768px) {
-		border-top: 80px solid red;
 		border-right: none;
 		min-height: inherit;
 	}
@@ -32,8 +30,15 @@ body {
 		max-width: 100%;
 	}
 	h1 {
-		color: red;
-		font-size: 18px;
+		color: #777;
+		font-size: 20px;
 		margin-top: 0;
+	}
+	a{
+		text-decoration: none !important
+	}
+
+	P{
+		text-align: justify;
 	}
 }
