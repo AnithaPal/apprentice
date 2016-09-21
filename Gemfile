@@ -67,3 +67,5 @@ gem 'devise', '~> 3.4.1'
 
 # For uploading files to S3
 gem 'aws-sdk', '~> 1.66.0'
+
+gem 'gon'

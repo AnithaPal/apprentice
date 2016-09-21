@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Apprentice</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <nav class="navbar navbar-default navbar-custom">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      <a class="navbar-brand" href="#"> Apprentice Exercise </a>
+  <head>
+    <title>Apprentice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= include_gon(:init => true) %> 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEuKfdBx0BgCnzX1Mek9_HcNs8COFsYw4&callback=createMap"
+    type="text/javascript"></script>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#"> Apprentice Exercise </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li > <%= link_to "Home Page", root_path %> </li>
+          <li> <%= link_to "FAQ",  faq_path %> </li>
+          <li> <%= link_to "Map",  map_path %> </li>
+        </ul>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li > <%= link_to "Home Page", root_path %> </li>
-        <li> <%= link_to "FAQ",  faq_path %> </li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
 
-  <% if notice %>
-    <p class="notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
-  <%= yield %>
-  <%= render 'layouts/google_analytics' %>
-</body>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+    <%= yield %>
+    <%= render 'layouts/google_analytics' %>
+  </body>
 </html>
