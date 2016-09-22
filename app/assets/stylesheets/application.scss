@@ -43,39 +43,10 @@ body {
 	}
 }
 
-// #map-container {
-//    height: 987px;
-//    border-radius: 16px 16px;
-//    border-color: #fff;
-//    border-style: solid;
-//    box-shadow: 2px 2px 10px #B1B1B1;
-//    margin-top: 25px;
-//    border-width: 7px;
-//  }
-//  #map-canvas {
-//    height: 900px;
-//    width: 100%;
-//  }
-
-
-// #map-container #map-canvas img{
-//   max-width: none;
-// }
-// /* Bootstrap Css Map Fix*/
-// #map-container #map-canvas label {
-//   width: auto; display:inline;
-// }
-
 #map-canvas {
   position: absolute;
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
-	border-radius: 16px 16px;
-	border-color: #fff;
-	border-style: solid;
-	box-shadow: 2px 2px 10px #B1B1B1;
-	margin-top: 25px;
-	border-width: 7px;
+  padding: 10px;
+	margin: 10px;
 }
